@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaniLimpVita | Higiene, Limpieza y Salud</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        },
+                        teal: {
+                            400: '#2dd4bf', 
+                            500: '#14b8a6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #2563eb, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-animate {
+            background: linear-gradient(-45deg, #eff6ff, #f0fdfa, #fff, #eff6ff);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-gradient-animate overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                    <div class="relative h-12 w-12 transition-transform duration-500 group-hover:rotate-6">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full drop-shadow-lg">
+                            <path d="M50 95C50 95 90 85 90 50V20L50 5L10 20V50C10 85 50 95 50 95Z" fill="url(#paint0_linear)" stroke="white" stroke-width="2"/>
+                            <path d="M50 75C61.0457 75 70 66.0457 70 55C70 43.9543 50 25 50 25C50 25 30 43.9543 30 55C30 66.0457 38.9543 75 50 75Z" fill="white"/>
+                            <path d="M50 45C50 45 55 50 55 55C55 60 50 65 50 65" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#2563EB"/>
+                                    <stop offset="1" stop-color="#14B8A6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    
+                    <div class="flex flex-col justify-center">
+                        <span class="font-extrabold text-2xl tracking-tight leading-none text-slate-900">
+                            Sani<span class="text-brand-600">Limp</span><span class="text-teal-500">Vita</span>
+                        </span>
+                        <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-slate-500 mt-1">Higiene • Limpieza • Salud</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm">Inicio</a>
+                    <a href="#tecnologia" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm">Tecnología</a>
+                    <a href="#servicios" class="text-slate-600 hover:text-brand-600 font-medium transition text-sm">Servicios</a>
+                    <a href="#contacto" class="bg-slate-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-600 transition shadow-lg shadow-brand-500/20 transform hover:-translate-y-0.5 text-sm">
+                        Agendar Cita
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="pt-40 pb-20 lg:pt-52 lg:pb-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md text-brand-900 text-xs font-bold mb-8 border border-white/50 shadow-sm uppercase tracking-wider">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-teal-500"></i>
+                    La evolución de la limpieza profunda
+                </div>
+                
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+                    Resultados que se ven,<br>
+                    <span class="text-gradient">Higiene que se siente</span>
+                </h1>
+                
+                <p class="text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Tu familia merece un espacio libre de ácaros y bacterias. Aprovecha nuestras ofertas exclusivas con tecnología SaniLimpVita.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#servicios" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-brand-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-700 transition shadow-xl shadow-brand-500/30 transform hover:-translate-y-1">
+                        Ver Ofertas
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-200 rounded-full blur-[120px] opacity-40"></div>
+        <div class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[600px] h-[600px] bg-teal-200 rounded-full blur-[120px] opacity-40"></div>
+    </section>
+
+    <section id="tecnologia" class="py-24 bg-white/40 border-y border-white/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-brand-600 font-bold tracking-wider text-sm uppercase">Innovación en Limpieza</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mt-2">Tecnología Trifásica</h2>
+                <p class="text-slate-500 mt-3 max-w-2xl mx-auto">Nuestro proceso industrial garantiza resultados que un lavado manual nunca podría alcanzar.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto lg:h-[600px]">
+                
+                <div class="md:col-span-2 md:row-span-2 bg-white rounded-[2rem] p-8 lg:p-12 border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col justify-between group overflow-hidden relative" data-aos="fade-right">
+                    <div class="relative z-10">
+                        <div class="h-14 w-14 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600 mb-6 group-hover:scale-110 transition duration-300">
+                            <i data-lucide="zap" class="h-7 w-7"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 mb-4">1. Inyección & Succión Profunda</h3>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            No solo limpiamos la tela por encima. Nuestro equipo inyecta una solución desinfectante a presión que penetra hasta el fondo de la fibra, disolviendo la suciedad incrustada. Simultáneamente, una potente succión extrae el agua sucia, ácaros y residuos.
+                        </p>
+                        <ul class="mt-8 space-y-3">
+                            <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                <i data-lucide="check-circle-2" class="text-teal-500 w-5 h-5"></i> Cero residuos jabonosos (evita que se ensucie rápido)
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-700 font-medium">
+                                <i data-lucide="check-circle-2" class="text-teal-500 w-5 h-5"></i> Restaura la textura original de la tela
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-brand-50 to-transparent rounded-tl-[100%] z-0"></div>
+                </div>
+
+                <div class="bg-slate-900 text-white rounded-[2rem] p-8 shadow-xl flex flex-col justify-center relative overflow-hidden group" data-aos="fade-left">
+                    <div class="relative z-10">
+                        <i data-lucide="shield-check" class="h-10 w-10 text-teal-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">2. Desinfección Total</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Eliminamos el 99.9% de ácaros, bacterias y hongos. Ideal para personas con alergias, asma o piel sensible.</p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-teal-500/20 rounded-bl-full blur-2xl group-hover:bg-teal-500/30 transition"></div>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-400 to-brand-500 rounded-[2rem] p-8 text-white shadow-xl flex flex-col justify-center relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="wind" class="h-10 w-10 text-white mb-4 opacity-80"></i>
+                    <h3 class="text-xl font-bold mb-2">3. Secado Rápido</h3>
+                    <p class="text-white/90 text-sm leading-relaxed">Gracias a la potencia industrial de succión, recuperamos el 90% del agua, permitiendo que tus muebles sequen en pocas horas, evitando humedad.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-slate-900 text-center mb-4" data-aos="fade-up">Ofertas Especiales</h2>
+            <p class="text-center text-slate-500 mb-16">Precios transparentes, resultados increíbles.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col" data-aos="fade-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="sala.jpg" onerror="this.src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800'" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition duration-700" alt="Lavado de Sala">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-slate-900 font-extrabold px-4 py-1 rounded-full text-sm shadow-lg animate-pulse">
+                            OFERTA BOMBA
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Lavado de Sala</h3>
+                            <span class="text-3xl font-extrabold text-brand-600">$600</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-600 text-sm flex-grow">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-500 w-4 h-4"></i> Eliminación de manchas</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-500 w-4 h-4"></i> Recuperación de color</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-500 w-4 h-4"></i> Desinfección profunda</li>
+                        </ul>
+                        <button onclick="prefillWhatsapp('Sala', '600')" class="w-full py-3 rounded-xl border-2 border-slate-900 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition">
+                            Apartar Oferta
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="auto.jpg" onerror="this.src='https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=800'" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition duration-700" alt="Lavado de Auto">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-slate-900 font-extrabold px-4 py-1 rounded-full text-sm shadow-lg animate-pulse">
+                            SUPER PRECIO
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Interior de Auto</h3>
+                            <span class="text-3xl font-extrabold text-brand-600">$500</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-600 text-sm flex-grow">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-500 w-4 h-4"></i> Asientos y Alfombras</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="text-teal-500 w-4 h-4"></i> Mas detalles en el chat de whatsapp</li>
+                          
+                        </ul>
+                        <button onclick="prefillWhatsapp('Auto', '500')" class="w-full py-3 rounded-xl border-2 border-slate-900 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition">
+                            Apartar Oferta
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="colchones.jpg" onerror="this.src='https://images.unsplash.com/photo-1631049552240-59c37f38802b?auto=format&fit=crop&q=80&w=800'" class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition duration-700" alt="Lavado de Colchones">
+                        <div class="absolute top-4 right-4 bg-teal-400 text-white font-extrabold px-4 py-1 rounded-full text-sm shadow-lg">
+                            ANTI-ÁCAROS
+                        </div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Lavado de Colchón</h3>
+                        
+                        <div class="space-y-3 mb-8 bg-slate-50 p-4 rounded-xl">
+                            <div class="flex justify-between items-center border-b border-slate-200 pb-2">
+                                <span class="text-slate-600 font-medium">Individual</span>
+                                <span class="font-bold text-brand-600 text-lg">$450</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-slate-200 pb-2">
+                                <span class="text-slate-600 font-medium">Matrimonial</span>
+                                <span class="font-bold text-brand-600 text-lg">$500</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-600 font-medium">King Size</span>
+                                <span class="font-bold text-brand-600 text-lg">$550</span>
+                            </div>
+                        </div>
+
+                        <button onclick="prefillWhatsapp('Colchon', 'varios')" class="w-full py-3 rounded-xl border-2 border-slate-900 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition">
+                            Apartar Oferta
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl shadow-brand-900/10 border border-slate-100 flex flex-col md:flex-row gap-16 relative z-10" data-aos="fade-up">
+                
+                <div class="flex-1">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Agenda tu limpieza <span class="text-teal-500">hoy mismo</span></h2>
+                    <p class="text-slate-600 mb-10 text-lg">
+                        Déjanos tus datos. Recibirás una cotización formal y disponibilidad vía WhatsApp en minutos.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-5 group cursor-pointer" onclick="document.getElementById('sendWhatsappBtn').click()">
+                            <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition duration-300">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wide">WhatsApp Directo</p>
+                                <p class="text-lg font-bold text-slate-800 group-hover:text-green-600 transition">+528112880312</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 bg-brand-100 rounded-2xl flex items-center justify-center text-brand-600">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wide">Zona de Servicio</p>
+                                <p class="text-lg font-bold text-slate-800">Servicio a Domicilio en Colima</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 bg-slate-50 p-8 rounded-[2rem]">
+                    <form class="space-y-4" onsubmit="event.preventDefault(); sendToWhatsapp();">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">Nombre Completo</label>
+                            <input type="text" id="clientName" class="w-full px-5 py-4 rounded-xl border-0 ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition bg-white" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-1">¿Qué necesitas limpiar?</label>
+                            <select id="clientService" class="w-full px-5 py-4 rounded-xl border-0 ring-1 ring-slate-200 focus:ring-2 focus:ring-brand-500 outline-none transition bg-white appearance-none cursor-pointer" required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="Sala oferta $600">Sala (Oferta $600)</option>
+                                <option value="Colchones">Colchones</option>
+                                <option value="Auto oferta $500">Interior de Auto (Oferta $500)</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="sendWhatsappBtn" class="w-full bg-slate-900 text-white font-bold py-5 rounded-xl hover:bg-brand-600 transition shadow-lg transform hover:-translate-y-1 flex justify-center items-center gap-3 text-lg">
+                            Solicitar por WhatsApp <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-slate-100 -skew-y-3 origin-bottom-left -z-10"></div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="h-8 w-8 bg-brand-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="shield" class="h-4 w-4"></i>
+                </div>
+                <span class="font-bold text-xl text-slate-900">SaniLimp<span class="text-teal-500">Vita</span></span>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; 2026 SaniLimpVita Services.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-quart',
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-sm', 'bg-white/90');
+            } else {
+                navbar.classList.remove('shadow-sm', 'bg-white/90');
+            }
+        });
+
+        // FUNCIONES DE WHATSAPP
+        function prefillWhatsapp(service, price) {
+            document.getElementById('clientService').value = service + " oferta";
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => document.getElementById('clientName').focus(), 800);
+        }
+
+        function sendToWhatsapp() {
+            const name = document.getElementById('clientName').value;
+            const service = document.getElementById('clientService').value;
+
+            // ⚠️ IMPORTANTE: CAMBIA ESTE NÚMERO POR EL TUYO ⚠️
+            const phoneNumber = "+52528112880312"; 
+
+            if(name && service) {
+                const message = `Hola SaniLimpVita, mi nombre es ${name}. Me interesa la promo de: ${service}.`;
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
